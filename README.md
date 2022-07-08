@@ -45,6 +45,14 @@
     - Overlap Pooling
         - 1. 가끔 논문에 나오는 풀링 방법
 
+# hyper parameter
+- pooling, stride, padding 은 하이퍼파라미터로 계산X
+
+# Fully connected layer의 patameter 갯수
+- CNN 두 종류의 FC layer 존재
+    - 마지막 Conv layer 바로 뒤에 붙는 FC layer
+    - 다른 FC layer 에 연결되는 FC layer
+
 # Classification (특징 추출 이후에 이어지는 결과 도출)
 - fully-connected layer
 
