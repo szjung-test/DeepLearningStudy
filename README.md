@@ -83,3 +83,10 @@ ex) 자동차를 인식하는법을 배우는 동안 얻은 지식은 트럭을 
 - residual representation 함수를 학습함으로써 신경망이 152 layer 까지 가질 수 있다.
 - ResNet 은 이전 layer의 입력을 다음 layer로 전달하기 위해 skip connection(또는 shortcut connection)
 - skip connection 은 깊은 신경망이 가능하게 한다.
+
+# DenseNet(2017)
+- Layer 간 정보가 전달하는것을 개선하였다.
+- 이전 레이어의 output 정보를 다음 레이어의 input 으로 받아오는 방법 사용
+- x_l = Hl([x_0,x_1,..., x_l-1])
+- X0,..,x_l-1을 (sum)더하지않고 (concatenation)이어붙였다.
+- 이어붙인 connection 덩어리를 하나의 Block으로 만들어서 그 덩어리들을 이어붙인것을 총 하나의 모델로 만듬 = Dense Block
