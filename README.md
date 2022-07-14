@@ -6,8 +6,10 @@
     - 1988 : LeNet 
     - 2012 : AlexNet
     - 2013 : Network in Network
-    - 2015 : VGG
+    - 2014 : GoogLeNet (2014 ImageNet 우승)
+    - 2014 : VGGNet (2014 ImageNet 준우승)
     - 2015 : ResNet
+    - 2017 : DenseNet
 
 
 # feature extraction(특징 추출)
@@ -66,8 +68,14 @@ ex) 자동차를 인식하는법을 배우는 동안 얻은 지식은 트럭을 
 - 기존에는 Feature map을 늘려서 이러한 문제를 극복하려고 했지만 Filter가 늘어남에 따라 연산량이 늘어나는 문제 발생
 - Convolution 을 할 때 Filter 대신에 MLP(Multi layer perceptron)를 사용하여 Feature 추출 방법 고안
 
+# GoogLeNet(2014)
+- 22층을 가진 deep neural network
+- 깊이와 넓이가 증가할 수록 높은 정확도를 얻을 수 있다.
+- but 두 가지 단점
+- 1. 기하급수적으로 parameter 증가 -> network의 깊이와 크기를 증가 제한
+- 2. 
 
-# VGG(2015)
+# VGG(2014)
 - 3*3 convolution filter 사용하여 convolution layer 깊이를 증가시킨 모델
 
 
