@@ -25,7 +25,22 @@ def MSE(pred, target, epochs=len(pred)):
 def RMSE(pred, target, epochs=len(pred)):
     losses=[]
     for i in range(epochs):
-        losses.append(np.sqrt)
+        losses.append(np.sqrt(np.sum((pred[i]-target[i])**2)/len(pred)))
+    return losses
+    
+def MAE(pred, target,epochs=len(pred)):
+    losses=[]
+    for i in range(epochs):
+        losses.append(np.sum(np.abs(pred[i]-target[i]))/len(pred))
+    return losses
+    
+pred = np.array([[0,4,9],[2,4,2],[3,5,6]])
+target = np.array([[3,5,7],[3,5,7],[3,5,7]])
+
+print(MSE(pred,target))
+print(RMSE(pred,target))
+print(MAE(pred,target))
+```
 
         - MSE 의 특징
          1. Mean Squared Error는 예측값과 정답의 차이를 제곱하기 때문에, 이상치에 대해 민감하다. 정답에 대해 예측값이 다른 경우, 그 차이는 오차값에 상대적으로 크게 반영된다.
